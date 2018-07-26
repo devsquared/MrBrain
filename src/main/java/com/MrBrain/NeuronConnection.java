@@ -1,4 +1,4 @@
-package NeuralNet;
+package main.java.com.MrBrain;
 
 public class NeuronConnection
 {

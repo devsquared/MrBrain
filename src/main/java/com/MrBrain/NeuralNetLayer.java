@@ -1,9 +1,7 @@
-package NeuralNet;
+package main.java.com.MrBrain;
 
 import java.util.List;
 import java.util.ArrayList;
-
-import NeuralNet.Neuron;
 
 public class NeuralNetLayer
 {
