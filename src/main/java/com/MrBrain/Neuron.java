@@ -1,10 +1,10 @@
-package main.java.com.MrBrain;
+package com.MrBrain;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.com.MrBrain.SignalCollectors.SignalCollector;
-import main.java.com.MrBrain.ActivationFunctions.ActivationFunction;
+import com.MrBrain.ActivationFunctions.ActivationFunction;
+import com.MrBrain.SignalCollectors.SignalCollector;
 
 public class Neuron
 {
@@ -75,22 +75,22 @@ public class Neuron
         this.outputConnections = outputConnections;
     }
 
-    public main.java.com.MrBrain.SignalCollectors.SignalCollector getSignalCollector()
+	public com.MrBrain.SignalCollectors.SignalCollector getSignalCollector()
     {
         return signalCollector;
     }
 
-    public void setSignalCollector(main.java.com.MrBrain.SignalCollectors.SignalCollector signalCollector)
+	public void setSignalCollector(com.MrBrain.SignalCollectors.SignalCollector signalCollector)
     {
         this.signalCollector = signalCollector;
     }
 
-    public main.java.com.MrBrain.ActivationFunctions.ActivationFunction getActivationFunction()
+	public com.MrBrain.ActivationFunctions.ActivationFunction getActivationFunction()
     {
         return activationFunction;
     }
 
-    public void setActivationFunction(main.java.com.MrBrain.ActivationFunctions.ActivationFunction activationFunction)
+	public void setActivationFunction(com.MrBrain.ActivationFunctions.ActivationFunction activationFunction)
     {
         this.activationFunction = activationFunction;
     }

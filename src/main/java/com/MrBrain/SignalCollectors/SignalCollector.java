@@ -1,8 +1,10 @@
-package main.java.com.MrBrain.SignalCollectors;
+package com.MrBrain.SignalCollectors;
 
 import java.util.List;
 
+import com.MrBrain.NeuronConnection;
+
 public interface SignalCollector
 {
-    public double collectPrevLayerOutput(List<main.java.com.MrBrain.NeuronConnection> inputConnections);
+	public double collectPrevLayerOutput(List<NeuronConnection> inputConnections);
 }

@@ -1,4 +1,4 @@
-package main.java.com.MrBrain.ActivationFunctions;
+package com.MrBrain.ActivationFunctions;
 
 public class RectifiedLinearFunction implements ActivationFunction
 {
