@@ -1,14 +1,16 @@
-package main.java.com.MrBrain.SignalCollectors;
+package com.MrBrain.SignalCollectors;
 
 import java.util.List;
+
+import com.MrBrain.NeuronConnection;
 
 public class WeightedSignalCollector implements SignalCollector
 {
     @Override
-    public double collectPrevLayerOutput(List<main.java.com.MrBrain.NeuronConnection> inputConnections)
+    public double collectPrevLayerOutput(List<NeuronConnection> inputConnections)
     {
         double weightedSum = 0;
-        for (main.java.com.MrBrain.NeuronConnection connection : inputConnections)
+	    for (NeuronConnection connection : inputConnections)
         {
             weightedSum += connection.getWeightedInput();
         }

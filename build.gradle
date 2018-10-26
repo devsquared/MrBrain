@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    testCompile 'junit:junit:4.12'
+}
+
+jar {
+	baseName = 'MrBrain'
+
+	manifest {
+		attributes 'Implementation-Title': 'Mr. Brain',
+			'Implementation-Version': project.version,
+			'Built-Date': new Date(),
+			'Built-JDK': System.getProperty('java.version')
+	}
+}
