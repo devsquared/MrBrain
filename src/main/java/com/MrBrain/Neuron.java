@@ -40,6 +40,16 @@ public class Neuron
         this.outputConnections = outputConnections;
     }
 
+    public Neuron(int id, SignalCollector signalCollector, ActivationFunction activationFunction)
+	{
+		this.id = id;
+		this.signalCollector = signalCollector;
+		this.activationFunction = activationFunction;
+
+		inputConnections = new ArrayList<>();
+		outputConnections = new ArrayList<>();
+	}
+
     public double calculateOutput()
     {
         double totalInput = signalCollector.collectPrevLayerOutput(inputConnections);
