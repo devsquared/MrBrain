@@ -6,9 +6,10 @@ import java.util.List;
 import com.MrBrain.ActivationFunctions.ActivationFunction;
 import com.MrBrain.SignalCollectors.SignalCollector;
 
+// TODO: Add interface over the top
 public class Neuron
 {
-    private String id;
+    private int id;
 
     protected List<NeuronConnection> inputConnections;
 
@@ -24,7 +25,7 @@ public class Neuron
         outputConnections = new ArrayList<>();
     }
 
-    public Neuron(String id)
+    public Neuron(int id)
     {
         this.id = id;
 
@@ -32,7 +33,7 @@ public class Neuron
         outputConnections = new ArrayList<>();
     }
 
-    public Neuron(String id, ArrayList<NeuronConnection> inputConnections, ArrayList<NeuronConnection> outputConnections)
+    public Neuron(int id, ArrayList<NeuronConnection> inputConnections, ArrayList<NeuronConnection> outputConnections)
     {
         this.id = id;
         this.inputConnections = inputConnections;
@@ -45,12 +46,12 @@ public class Neuron
         return activationFunction.calculateOutput(totalInput);
     }
 
-    public String getId()
+    public int getId()
     {
         return id;
     }
 
-    public void setId(String id)
+    public void setId(int id)
     {
         this.id = id;
     }
