@@ -40,6 +40,16 @@ public class Neuron
         this.outputConnections = outputConnections;
     }
 
+    public Neuron(int id, SignalCollector signalCollector, ActivationFunction activationFunction)
+	{
+		this.id = id;
+		this.signalCollector = signalCollector;
+		this.activationFunction = activationFunction;
+
+		inputConnections = new ArrayList<>();
+		outputConnections = new ArrayList<>();
+	}
+
     public double calculateOutput()
     {
         double totalInput = signalCollector.collectPrevLayerOutput(inputConnections);
@@ -56,17 +66,17 @@ public class Neuron
         this.id = id;
     }
 
-    public java.util.List<NeuronConnection> getInputConnections()
+    public List<NeuronConnection> getInputConnections()
     {
         return inputConnections;
     }
 
-    public void setInputConnections(java.util.List<NeuronConnection> inputConnections)
+    public void setInputConnections(List<NeuronConnection> inputConnections)
     {
         this.inputConnections = inputConnections;
     }
 
-    public java.util.List<NeuronConnection> getOutputConnections()
+    public List<NeuronConnection> getOutputConnections()
     {
         return outputConnections;
     }
@@ -76,22 +86,22 @@ public class Neuron
         this.outputConnections = outputConnections;
     }
 
-	public com.MrBrain.SignalCollectors.SignalCollector getSignalCollector()
+	public SignalCollector getSignalCollector()
     {
         return signalCollector;
     }
 
-	public void setSignalCollector(com.MrBrain.SignalCollectors.SignalCollector signalCollector)
+	public void setSignalCollector(SignalCollector signalCollector)
     {
         this.signalCollector = signalCollector;
     }
 
-	public com.MrBrain.ActivationFunctions.ActivationFunction getActivationFunction()
+	public ActivationFunction getActivationFunction()
     {
         return activationFunction;
     }
 
-	public void setActivationFunction(com.MrBrain.ActivationFunctions.ActivationFunction activationFunction)
+	public void setActivationFunction(ActivationFunction activationFunction)
     {
         this.activationFunction = activationFunction;
     }
