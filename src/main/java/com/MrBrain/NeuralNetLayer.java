@@ -10,14 +10,10 @@ import java.util.List;
 public class NeuralNetLayer
 {
 	private int id;
-
-	protected List<Neuron> neurons;
-
-	protected int numberOfNeurons;
-
-	protected ActivationFunction activationFunction;
-
-	protected SignalCollector signalCollector;
+	private List<Neuron> neurons;
+	private int numberOfNeurons;
+	private ActivationFunction activationFunction;
+	private SignalCollector signalCollector;
 
 	public NeuralNetLayer(int id)
 	{

@@ -9,38 +9,34 @@ import com.MrBrain.SignalCollectors.SignalCollector;
 // TODO: Add interface over the top
 public class Neuron
 {
-    private int id;
+	private int id;
+	private List<NeuronConnection> inputConnections;
+	private List<NeuronConnection> outputConnections;
+	private SignalCollector signalCollector;
+	private ActivationFunction activationFunction;
 
-    protected List<NeuronConnection> inputConnections;
+	public Neuron()
+	{
+		inputConnections = new ArrayList<>();
+		outputConnections = new ArrayList<>();
+	}
 
-    protected List<NeuronConnection> outputConnections;
+	public Neuron(int id)
+	{
+		this.id = id;
 
-    protected SignalCollector signalCollector;
+		inputConnections = new ArrayList<>();
+		outputConnections = new ArrayList<>();
+	}
 
-    protected ActivationFunction activationFunction;
+	public Neuron(int id, ArrayList<NeuronConnection> inputConnections, ArrayList<NeuronConnection> outputConnections)
+	{
+		this.id = id;
+		this.inputConnections = inputConnections;
+		this.outputConnections = outputConnections;
+	}
 
-    public Neuron()
-    {
-        inputConnections = new ArrayList<>();
-        outputConnections = new ArrayList<>();
-    }
-
-    public Neuron(int id)
-    {
-        this.id = id;
-
-        inputConnections = new ArrayList<>();
-        outputConnections = new ArrayList<>();
-    }
-
-    public Neuron(int id, ArrayList<NeuronConnection> inputConnections, ArrayList<NeuronConnection> outputConnections)
-    {
-        this.id = id;
-        this.inputConnections = inputConnections;
-        this.outputConnections = outputConnections;
-    }
-
-    public Neuron(int id, SignalCollector signalCollector, ActivationFunction activationFunction)
+	public Neuron(int id, SignalCollector signalCollector, ActivationFunction activationFunction)
 	{
 		this.id = id;
 		this.signalCollector = signalCollector;
@@ -50,59 +46,59 @@ public class Neuron
 		outputConnections = new ArrayList<>();
 	}
 
-    public double calculateOutput()
-    {
-        double totalInput = signalCollector.collectPrevLayerOutput(inputConnections);
-        return activationFunction.calculateOutput(totalInput);
-    }
+	public double calculateOutput()
+	{
+		double totalInput = signalCollector.collectPrevLayerOutput(inputConnections);
+		return activationFunction.calculateOutput(totalInput);
+	}
 
-    public int getId()
-    {
-        return id;
-    }
+	public int getId()
+	{
+		return id;
+	}
 
-    public void setId(int id)
-    {
-        this.id = id;
-    }
+	public void setId(int id)
+	{
+		this.id = id;
+	}
 
-    public List<NeuronConnection> getInputConnections()
-    {
-        return inputConnections;
-    }
+	public List<NeuronConnection> getInputConnections()
+	{
+		return inputConnections;
+	}
 
-    public void setInputConnections(List<NeuronConnection> inputConnections)
-    {
-        this.inputConnections = inputConnections;
-    }
+	public void setInputConnections(List<NeuronConnection> inputConnections)
+	{
+		this.inputConnections = inputConnections;
+	}
 
-    public List<NeuronConnection> getOutputConnections()
-    {
-        return outputConnections;
-    }
+	public List<NeuronConnection> getOutputConnections()
+	{
+		return outputConnections;
+	}
 
-    public void setOutputConnections(java.util.List<NeuronConnection> outputConnections)
-    {
-        this.outputConnections = outputConnections;
-    }
+	public void setOutputConnections(java.util.List<NeuronConnection> outputConnections)
+	{
+		this.outputConnections = outputConnections;
+	}
 
 	public SignalCollector getSignalCollector()
-    {
-        return signalCollector;
-    }
+	{
+		return signalCollector;
+	}
 
 	public void setSignalCollector(SignalCollector signalCollector)
-    {
-        this.signalCollector = signalCollector;
-    }
+	{
+		this.signalCollector = signalCollector;
+	}
 
 	public ActivationFunction getActivationFunction()
-    {
-        return activationFunction;
-    }
+	{
+		return activationFunction;
+	}
 
 	public void setActivationFunction(ActivationFunction activationFunction)
-    {
-        this.activationFunction = activationFunction;
-    }
+	{
+		this.activationFunction = activationFunction;
+	}
 }
