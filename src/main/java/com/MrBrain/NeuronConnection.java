@@ -2,11 +2,9 @@ package com.MrBrain;
 
 public class NeuronConnection
 {
-	protected Neuron fromNeuron;
-
-	protected Neuron toNeuron;
-
-	protected double weight;
+	private Neuron fromNeuron;
+	private Neuron toNeuron;
+	private double weight;
 
 	public NeuronConnection(Neuron fromNeuron, Neuron toNeuron)
 	{
