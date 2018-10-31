@@ -9,4 +9,26 @@ public class LinearCombinationFunction implements ActivationFunction
 	{
 		return summedInput + bias;
 	}
+
+	/**
+	 * Getter for bias.
+	 *
+	 * @return
+	 * 			double value for bias
+	 */
+	public double getBias()
+	{
+		return bias;
+	}
+
+	/**
+	 * Setter for bias.
+	 *
+	 * @param bias
+	 * 			double value for bias
+	 */
+	public void setBias(double bias)
+	{
+		this.bias = bias;
+	}
 }
