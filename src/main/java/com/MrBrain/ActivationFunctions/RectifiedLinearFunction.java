@@ -1,5 +1,8 @@
 package com.MrBrain.ActivationFunctions;
 
+/**
+ * Rectified Linear activation function. This will return the max of zero and the summed input to the function.
+ */
 public class RectifiedLinearFunction implements ActivationFunction
 {
 	@Override
