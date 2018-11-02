@@ -1,5 +1,13 @@
 # MrBrain
-Java implementation of simple neural network.
 
-This project originated as a python implementation for use in daily fantasy football guesses. 
-Wanted to port it to more languages as well as write some tests for it.
+---
+## About
+Java implementation of a neural network that uses the builder pattern. 
+
+## Examples
+...Examples to come...
+
+## Checkstyle
+Please use the checkstyle file provided. [Here](https://medium.com/@jayanga/how-to-configure-checkstyle-and-findbugs-plugins-to-intellij-idea-for-wso2-products-c5f4bbe9673a)
+ is a quick guide on how to set this up when using IntelliJ.
+ 
