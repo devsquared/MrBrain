@@ -1,10 +1,10 @@
-package com.MrBrain;
+package com.MrBrain.NeuralNetwork;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.MrBrain.ActivationFunctions.ActivationFunction;
-import com.MrBrain.SignalCollectors.SignalCollector;
+import com.MrBrain.NeuralNetwork.ActivationFunctions.ActivationFunction;
+import com.MrBrain.NeuralNetwork.SignalCollectors.SignalCollector;
 
 /**
  * Neuron that stores the signal collector, activation function, and references to all connections.
@@ -33,7 +33,7 @@ public class Neuron
 	 * @param id
 	 * 			int to number neuron
 	 */
-	public Neuron(int id)
+	Neuron(int id)
 	{
 		this.id = id;
 
@@ -68,7 +68,7 @@ public class Neuron
 	 * @param activationFunction
 	 * 			implemented activation function
 	 */
-	public Neuron(int id, SignalCollector signalCollector, ActivationFunction activationFunction)
+	Neuron(int id, SignalCollector signalCollector, ActivationFunction activationFunction)
 	{
 		this.id = id;
 		this.signalCollector = signalCollector;
@@ -84,7 +84,7 @@ public class Neuron
 	 * @return
 	 * 			double value for output
 	 */
-	public double calculateOutput()
+	double calculateOutput()
 	{
 		double totalInput = signalCollector.collectPrevLayerOutput(inputConnections);
 		return activationFunction.calculateOutput(totalInput);
@@ -173,7 +173,7 @@ public class Neuron
 	 * @param signalCollector
 	 * 			Signal Collector for neuron
 	 */
-	public void setSignalCollector(SignalCollector signalCollector)
+	void setSignalCollector(SignalCollector signalCollector)
 	{
 		this.signalCollector = signalCollector;
 	}
@@ -195,7 +195,7 @@ public class Neuron
 	 * @param activationFunction
 	 * 			activation function for neuron
 	 */
-	public void setActivationFunction(ActivationFunction activationFunction)
+	void setActivationFunction(ActivationFunction activationFunction)
 	{
 		this.activationFunction = activationFunction;
 	}

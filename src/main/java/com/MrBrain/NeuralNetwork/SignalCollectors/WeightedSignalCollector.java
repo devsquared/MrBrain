@@ -1,8 +1,8 @@
-package com.MrBrain.SignalCollectors;
+package com.MrBrain.NeuralNetwork.SignalCollectors;
 
 import java.util.List;
 
-import com.MrBrain.NeuronConnection;
+import com.MrBrain.NeuralNetwork.NeuronConnection;
 
 public class WeightedSignalCollector implements SignalCollector
 {

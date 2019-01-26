@@ -1,4 +1,4 @@
-package com.MrBrain.ActivationFunctions;
+package com.MrBrain.NeuralNetwork.ActivationFunctions;
 
 /**
  * Rectified Linear activation function. This will return the max of zero and the summed input to the function.

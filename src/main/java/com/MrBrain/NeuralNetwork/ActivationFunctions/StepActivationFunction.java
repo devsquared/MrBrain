@@ -1,4 +1,4 @@
-package com.MrBrain.ActivationFunctions;
+package com.MrBrain.NeuralNetwork.ActivationFunctions;
 
 public class StepActivationFunction implements ActivationFunction
 {

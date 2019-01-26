@@ -1,10 +1,11 @@
-package com.MrBrain;
+package com.MrBrain.NeuralNetwork;
 
-import com.MrBrain.ActivationFunctions.ActivationFunction;
-import com.MrBrain.SignalCollectors.SignalCollector;
+import com.MrBrain.NeuralNetwork.ActivationFunctions.ActivationFunction;
+import com.MrBrain.NeuralNetwork.SignalCollectors.SignalCollector;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * Neural Network layer. This is the structure that contains all neurons of a given layer in the network.
@@ -24,7 +25,7 @@ public class NeuralNetLayer
 	 * @param id
 	 * 			int for the number of layer
 	 */
-	public NeuralNetLayer(int id)
+	NeuralNetLayer(int id)
 	{
 		this.id = id;
 		neurons = new ArrayList<>();
@@ -53,17 +54,15 @@ public class NeuralNetLayer
 	 * @param numberOfNeurons
 	 * 			int for the number of neurons in the layer
 	 */
-	public NeuralNetLayer(int id, int numberOfNeurons)
+	NeuralNetLayer(int id, int numberOfNeurons)
 	{
+
+
 		this.id = id;
 		this.numberOfNeurons = numberOfNeurons;
+		this.neurons = new ArrayList<>();
 
-		for (int i = 0; i < numberOfNeurons; i++)
-		{
-			Neuron neuron = new Neuron(i + 1);
-
-			neurons.add(neuron);
-		}
+		IntStream.of(numberOfNeurons).forEach(i -> this.neurons.add(new Neuron(i + 1)));
 	}
 
 	/**
@@ -83,13 +82,9 @@ public class NeuralNetLayer
 	{
 		this.id = id;
 		this.numberOfNeurons = numberOfNeurons;
+		this.neurons = new ArrayList<>();
 
-		for (int i = 0; i < numberOfNeurons; i++)
-		{
-			Neuron neuron = new Neuron(i + 1, signalCollector, activationFunction);
-
-			neurons.add(neuron);
-		}
+		IntStream.of(numberOfNeurons).forEach(i -> neurons.add(new Neuron(i + 1, signalCollector, activationFunction)));
 	}
 
 	/**
@@ -109,7 +104,7 @@ public class NeuralNetLayer
 	 * @param id
 	 * 			int for the number of the layer
 	 */
-	public void setId(int id)
+	void setId(int id)
 	{
 		this.id = id;
 	}
@@ -175,11 +170,11 @@ public class NeuralNetLayer
 	 * @param activationFunction
 	 * 			activation function of the layer
 	 */
-	public void setActivationFunction(ActivationFunction activationFunction)
+	//TODO: Add method to add different activation functions to different neurons
+	void setActivationFunction(ActivationFunction activationFunction)
 	{
 		this.activationFunction = activationFunction;
 
-		// The following should be broken out into its own function.
 		for (Neuron neuron : neurons)
 		{
 			neuron.setActivationFunction(activationFunction);
@@ -201,12 +196,13 @@ public class NeuralNetLayer
 	 * Set the signal collector of the layer and apply it to all neurons (if neurons are set).
 	 *
 	 * @param signalCollector
+	 * 			the signalCollector to add to the neurons
 	 */
-	public void setSignalCollector(SignalCollector signalCollector)
+	//TODO: Need to add ways to easily apply different signal collectors to different neurons
+	void setSignalCollector(SignalCollector signalCollector)
 	{
 		this.signalCollector = signalCollector;
 
-		// The following should be broken out into its own function.
 		for (Neuron neuron : neurons)
 		{
 			neuron.setSignalCollector(signalCollector);

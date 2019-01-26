@@ -1,12 +1,13 @@
 package com.MrBrain.SignalCollectors;
 
-import com.MrBrain.NeuronConnection;
-import static org.junit.Assert.*;
+import com.MrBrain.NeuralNetwork.NeuronConnection;
+import com.MrBrain.NeuralNetwork.SignalCollectors.ProductUnitSignalCollector;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class ProductUnitSignalCollectorTest {

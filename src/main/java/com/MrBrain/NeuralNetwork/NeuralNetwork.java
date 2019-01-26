@@ -1,10 +1,11 @@
-package com.MrBrain;
+package com.MrBrain.NeuralNetwork;
 
-import com.MrBrain.ActivationFunctions.ActivationFunction;
-import com.MrBrain.SignalCollectors.SignalCollector;
+import com.MrBrain.NeuralNetwork.ActivationFunctions.ActivationFunction;
+import com.MrBrain.NeuralNetwork.SignalCollectors.SignalCollector;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * Neural Network containing the layers of neurons.
@@ -40,12 +41,7 @@ public class NeuralNetwork
 		{
 			this.numberOfLayers = numberOfLayers;
 
-			for (int i = 0; i < numberOfLayers; i++)
-			{
-				NeuralNetLayer layer = new NeuralNetLayer(i + 1);
-
-				layers.add(layer);
-			}
+			IntStream.of(numberOfLayers).forEach(i -> layers.add(new NeuralNetLayer(i + 1)));
 
 			return this;
 		}
@@ -150,9 +146,9 @@ public class NeuralNetwork
 		}
 	}
 
-	protected List<NeuralNetLayer> layers;
+	private List<NeuralNetLayer> layers;
 
-	protected int numberOfLayers;
+	private int numberOfLayers;
 
 	/**
 	 * Default constructor.

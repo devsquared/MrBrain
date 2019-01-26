@@ -1,6 +1,6 @@
-package com.MrBrain.SignalCollectors;
+package com.MrBrain.NeuralNetwork.SignalCollectors;
 
-import com.MrBrain.NeuronConnection;
+import com.MrBrain.NeuralNetwork.NeuronConnection;
 
 import java.util.List;
 

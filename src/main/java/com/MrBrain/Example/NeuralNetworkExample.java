@@ -1,6 +1,6 @@
 package com.MrBrain.Example;
 
-public class example
+public class NeuralNetworkExample
 {
 
 }

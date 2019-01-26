@@ -1,8 +1,8 @@
-package com.MrBrain.SignalCollectors;
+package com.MrBrain.NeuralNetwork.SignalCollectors;
 
 import java.util.List;
 
-import com.MrBrain.NeuronConnection;
+import com.MrBrain.NeuralNetwork.NeuronConnection;
 
 /**
  * Signal collector that combines the input connections of a neuron prior to neuron magic.
@@ -17,5 +17,5 @@ public interface SignalCollector
 	 * @return
 	 * 			double value of calculated input
 	 */
-	public double collectPrevLayerOutput(List<NeuronConnection> inputConnections);
+	double collectPrevLayerOutput(List<NeuronConnection> inputConnections);
 }

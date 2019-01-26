@@ -1,8 +1,8 @@
-package com.MrBrain.ActivationFunctions;
+package com.MrBrain.NeuralNetwork.ActivationFunctions;
 
 public class SigmoidActivationFunction implements ActivationFunction
 {
-	private double slope = 1d;
+	private double slope;
 
 	public SigmoidActivationFunction(double slope)
 	{
