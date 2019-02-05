@@ -2,7 +2,8 @@
 
 ---
 ## About
-Java implementation of a neural network that uses the builder pattern. 
+Java implementation of a neural network. Working on it as a side project.
+Incrementally adding pieces as I have time.
 
 ## Examples
 ...Examples to come...
