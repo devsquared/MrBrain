@@ -1,4 +1,4 @@
-package com.MrBrain.NeuralNetwork.ActivationFunctions;
+package com.OpenMLava.NeuralNetwork.ActivationFunctions;
 
 public interface ActivationFunction
 {

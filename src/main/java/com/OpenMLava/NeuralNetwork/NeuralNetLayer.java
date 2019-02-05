@@ -1,7 +1,7 @@
-package com.MrBrain.NeuralNetwork;
+package com.OpenMLava.NeuralNetwork;
 
-import com.MrBrain.NeuralNetwork.ActivationFunctions.ActivationFunction;
-import com.MrBrain.NeuralNetwork.SignalCollectors.SignalCollector;
+import com.OpenMLava.NeuralNetwork.ActivationFunctions.ActivationFunction;
+import com.OpenMLava.NeuralNetwork.SignalCollectors.SignalCollector;
 
 import java.util.ArrayList;
 import java.util.List;

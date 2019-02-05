@@ -1,10 +1,10 @@
-package com.MrBrain.NeuralNetwork;
+package com.OpenMLava.NeuralNetwork;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.MrBrain.NeuralNetwork.ActivationFunctions.ActivationFunction;
-import com.MrBrain.NeuralNetwork.SignalCollectors.SignalCollector;
+import com.OpenMLava.NeuralNetwork.ActivationFunctions.ActivationFunction;
+import com.OpenMLava.NeuralNetwork.SignalCollectors.SignalCollector;
 
 /**
  * Neuron that stores the signal collector, activation function, and references to all connections.

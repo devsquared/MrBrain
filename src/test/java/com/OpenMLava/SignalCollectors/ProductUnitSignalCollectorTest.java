@@ -1,7 +1,7 @@
-package com.MrBrain.SignalCollectors;
+package com.OpenMLava.SignalCollectors;
 
-import com.MrBrain.NeuralNetwork.NeuronConnection;
-import com.MrBrain.NeuralNetwork.SignalCollectors.ProductUnitSignalCollector;
+import com.OpenMLava.NeuralNetwork.NeuronConnection;
+import com.OpenMLava.NeuralNetwork.SignalCollectors.ProductUnitSignalCollector;
 import org.junit.Test;
 
 import java.util.ArrayList;

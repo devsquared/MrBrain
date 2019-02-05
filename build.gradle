@@ -18,7 +18,7 @@ dependencies {
 }
 
 jar {
-	baseName = 'MrBrain'
+	baseName = 'OpenMLava'
 
 	manifest {
 		attributes 'Implementation-Title': 'Mr. Brain',
