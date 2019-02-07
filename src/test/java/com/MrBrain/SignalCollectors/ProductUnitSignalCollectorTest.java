@@ -1,7 +1,7 @@
-package com.OpenMLava.SignalCollectors;
+package com.MrBrain.SignalCollectors;
 
-import com.OpenMLava.NeuralNetwork.NeuronConnection;
-import com.OpenMLava.NeuralNetwork.SignalCollectors.ProductUnitSignalCollector;
+import com.MrBrain.NeuralNetwork.NeuronConnection;
+import com.MrBrain.NeuralNetwork.SignalCollectors.ProductUnitSignalCollector;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -10,8 +10,11 @@ import java.util.List;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-public class ProductUnitSignalCollectorTest {
-
+public class ProductUnitSignalCollectorTest
+{
+	/**
+	 * Test the collection of previous layer's output.
+	 */
 	@Test
 	public void collectPrevLayerOutputTest()
 	{

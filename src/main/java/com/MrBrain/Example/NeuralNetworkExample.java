@@ -1,4 +1,4 @@
-package com.OpenMLava.Example;
+package com.MrBrain.Example;
 
 public class NeuralNetworkExample
 {

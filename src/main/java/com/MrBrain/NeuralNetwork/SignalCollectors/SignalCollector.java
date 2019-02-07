@@ -1,8 +1,8 @@
-package com.OpenMLava.NeuralNetwork.SignalCollectors;
+package com.MrBrain.NeuralNetwork.SignalCollectors;
 
 import java.util.List;
 
-import com.OpenMLava.NeuralNetwork.NeuronConnection;
+import com.MrBrain.NeuralNetwork.NeuronConnection;
 
 /**
  * Signal collector that combines the input connections of a neuron prior to neuron magic.

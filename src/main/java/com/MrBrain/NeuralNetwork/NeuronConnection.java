@@ -1,4 +1,4 @@
-package com.OpenMLava.NeuralNetwork;
+package com.MrBrain.NeuralNetwork;
 
 /**
  * The Neuron Connection between neurons within the network. The main purpose of this is to hold the weight

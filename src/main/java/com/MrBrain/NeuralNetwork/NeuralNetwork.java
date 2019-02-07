@@ -1,4 +1,4 @@
-package com.OpenMLava.NeuralNetwork;
+package com.MrBrain.NeuralNetwork;
 
 public interface NeuralNetwork
 {
