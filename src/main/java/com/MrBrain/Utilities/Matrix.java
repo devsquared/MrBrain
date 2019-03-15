@@ -1,11 +1,33 @@
 package com.MrBrain.Utilities;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
+// TODO: rewrite with graph nodes
 public abstract class Matrix
 {
 	private int[][] coreMatrix;
-	private List<String> columnHeaders;
+	private Map<String, Integer> keyedEntries;
 
-	// give default constructors and then some default methods
+	public Matrix()
+	{
+		this.keyedEntries = new HashMap<>();
+	}
+
+	public Matrix(int[][] matrix)
+	{
+		this.coreMatrix = matrix;
+	}
+
+	public Matrix(Map<String, Integer> keyedEntries)
+	{
+		this.keyedEntries = keyedEntries;
+	}
+
+	public Matrix(int[][] matrix, Map<String, Integer> keyedEntries)
+	{
+		this.coreMatrix = matrix;
+		this.keyedEntries = keyedEntries;
+	}
+
 }
